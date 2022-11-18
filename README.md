@@ -1,2 +1,2 @@
 # HTML-and-CSS-Template-Two
-HTML-and-CSS-Design N2
+One page Template website made for practicing with HTML and CSS
