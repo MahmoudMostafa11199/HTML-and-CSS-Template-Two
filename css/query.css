@@ -1,0 +1,144 @@
+/*small*/
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+
+  .services .services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-gap: 65px 40px;
+  }
+
+  .port-container .box {
+    flex-basis: 50%;
+  }
+
+  .stats .container .box {
+    flex-basis: 50%;
+  }
+}
+
+/*medium*/
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+
+  .stats .container .box {
+    flex-basis: 25%;
+  }
+
+  .our-skills .container > div {
+    flex-basis: 45%;
+  }
+}
+
+/*large*/
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+
+  .port-container .box {
+    flex: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  header nav ul {
+    display: none;
+  }
+  header nav .toggle-menu {
+    display: block;
+  }
+
+  header nav .toggle-menu:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #00000085;
+    width: 100%;
+  }
+
+  header nav ul li a {
+    padding: 25px !important;
+  }
+
+  .landing .content {
+    width: 100%;
+  }
+
+  .landing .text {
+    min-width: 100%;
+  }
+
+  .landing .change-background {
+    display: none;
+  }
+
+  .services .srv-box {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .services .srv-box i {
+    margin: 0 0 40px;
+  }
+
+  .design .text {
+    min-width: 100%;
+  }
+
+  .design .image {
+    display: none;
+  }
+
+  .about img {
+    bottom: -30px;
+    margin-top: -30px;
+  }
+
+  .stats .container .box {
+    flex-basis: 100%;
+  }
+
+  .our-skills .testimonials .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .our-skills .testimonials .content img {
+    margin: 0 auto 20px;
+  }
+
+  .our-skills .testimonials .content .text p {
+    text-align: center;
+    margin: 5px auto;
+  }
+
+  .contact .content {
+    flex-direction: column;
+  }
+
+  .contact .content .info {
+    order: -1;
+    text-align: center;
+    gap: 35px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .subscribe .container {
+    flex-direction: column;
+  }
+
+  .subscribe .container p {
+    margin: 25px 0 0;
+    text-align: center;
+  }
+}
