@@ -22,6 +22,7 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -88,67 +89,47 @@ i {
 
 /*------------------- Header -------------------*/
 header {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  z-index: 3;
+  position: relative;
 }
 
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  min-height: 97px;
+  background-color: #040000e0;
+  min-height: 80px;
+  width: 100%;
 }
 
-header .container::after {
-  content: "";
-  position: absolute;
-  background-color: #a2a2a2;
-  height: 1px;
-  width: calc(100% - 30px);
-  bottom: 0;
-  left: 15px;
-  z-index: -3;
-}
-
-header .logo img {
+header .logo {
   height: 40px;
 }
 
 header nav {
-  flex: 1;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-header nav .toggle-menu {
-  color: #fff;
-  font-size: 14px;
-  display: none;
-}
-
 header nav ul {
   display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
-header nav ul li a:link,
-header nav ul li a:visited {
-  padding: 40px 15px;
-  display: block;
-  font-size: 14px;
+header nav a:link,
+header nav a:visited {
+  display: inline-block;
+  font-size: 16px;
   text-decoration: none;
   color: #fff;
   transition: 0.3s;
 }
 
-header nav ul li a:hover,
-header nav ul li a:active,
-header nav ul li a.active {
+header nav a:hover,
+header nav a:active,
+header nav a.active {
   color: var(--main-color);
-  border-bottom: 1px solid var(--main-color);
 }
 
 header .form {
@@ -165,6 +146,41 @@ header .form i {
   top: 50%;
   transform: translateY(-50%);
   right: 0;
+}
+
+/*-------- Mobile Nav -------*/
+.btn-mobile-nav {
+  border: none;
+  background:  none;
+  cursor: pointer;
+
+  display:  none  ;
+}
+
+.icon-mobile-nav {
+  color: #fff;
+}
+
+.btn-close {
+  color: #000;
+  display:  none  ;
+}
+
+/*-------- Sticky Nav -------*/
+.sticky  .header{
+  position: fixed;
+  top: 0;
+  bottom: 0; 
+  width: 100%;
+  height: 80px;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #0e151ef0;
+  z-index: 999;
+}
+
+.sticky .services{
+  margin-top: 80px;
 }
 
 /*------------------- Landing -------------------*/
@@ -394,7 +410,9 @@ header .form i {
   color: var(--main-color);
 }
 
-.portfolio a {
+.portfolio a:link,
+.portfolio a:visited
+ {
   display: block;
   width: fit-content;
   background-color: var(--main-color);
@@ -664,7 +682,7 @@ header .form i {
 
 .pricing .plans .plan:hover {
   transform: translate(0, -5px);
-  box-shadow: 0 3.6rem 3.6rem rgb(0 0 0 / 7%);
+  box-shadow: 0 36px 34px rgb(0 0 0 / 7%);
 }
 
 .pricing .plans .plan .head {
@@ -721,13 +739,17 @@ header .form i {
   bottom: 0;
 }
 
-.pricing .plans .plan .foot a {
+.pricing .plans .plan .foot a:link,
+.pricing .plans .plan .foot a:visited {
   display: block;
+  font-size: 18px;
   text-decoration: none;
-  padding: 25px;
+  padding: 15px 25px;
   width: fit-content;
-  border: 1px solid var(--main-color);
+  border-radius: 9px;
   margin: 25px auto;
+  color: #fff;
+  background-color: var(--main-color);
 }
 
 .pricing .contact-text {

@@ -46,26 +46,6 @@
 }
 
 @media (max-width: 767px) {
-  header nav ul {
-    display: none;
-  }
-  header nav .toggle-menu {
-    display: block;
-  }
-
-  header nav .toggle-menu:hover + ul {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    background-color: #00000085;
-    width: 100%;
-  }
-
-  header nav ul li a {
-    padding: 25px !important;
-  }
 
   .landing .content {
     width: 100%;
@@ -130,6 +110,71 @@
     gap: 35px;
     margin-bottom: 50px;
   }
+
+  /*--------------- Mobile Nav --------------*/
+  .btn-mobile-nav {
+    display: block ;
+    line-height: 4.5;
+
+    z-index: 999;
+  }
+
+  header nav{
+    background-color: rgb(255, 255, 255, 0.95);
+    position: absolute;
+    top:  0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in;
+
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+    z-index: 1;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    visibility: hidden;
+  }
+
+  .nav-open nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .btn-close {
+    display: block;
+  }
+
+  .nav-open .btn-menu {
+    display: none;
+  }
+
+  header  nav ul {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  header nav a:link,
+  header nav a:visited  {
+    color: #000;
+    font-size:  28px;
+  }
+
+  header nav a:hover,
+  header nav a.active {
+    color: #19c8fa !important;
+  }
+
+  header .form{
+    display:  none;
+  }
 }
 
 @media (max-width: 992px) {
@@ -141,4 +186,5 @@
     margin: 25px 0 0;
     text-align: center;
   }
+  
 }

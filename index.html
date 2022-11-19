@@ -14,6 +14,17 @@
 
     <link rel="stylesheet" href="css/query.css" />
 
+    <!----------------- ICON ----------------->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- JavaScript File -->
     <script defer src="./script.js"></script>
 
     <!-- Goggle Font -->
@@ -27,13 +38,10 @@
     <!---------------------------------- Header ---------------------------------->
     <header class="header" id="home">
       <div class="container">
-        <a href="#" class="logo">
-          <img src="image/logo.png" alt="Logo" />
-        </a>
+          <img class="logo" src="image/logo.png" alt="Logo" />
         <nav>
-          <i class="fas fa-bars toggle-menu"></i>
           <ul>
-            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#" class="active" >Home</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#about">About</a></li>
@@ -44,6 +52,11 @@
             <i class="fas fa-search"></i>
           </div>
         </nav>
+
+          <button class="btn-mobile-nav">
+            <i class="fas fa-bars btn-menu icon-mobile-nav fa-2x"></i>
+            <i class="fas fa-times btn-close icon-mobile-nav fa-3x"></i>
+          </button>
       </div>
     </header>
 
@@ -468,20 +481,22 @@
         </div>
 
         <div class="content">
-          <form action="">
+          <form action="" netlify>
             <input
               class="main-input"
               type="name"
               name="name"
               placeholder="Your Name"
+	      required
             />
             <input
               class="main-input"
               type="email"
               name="email"
-              placeholder="Your Email"
+              placeholder="mm@example.com"
+	      required
             />
-            <textarea class="main-input" placeholder="Your Message"></textarea>
+            <textarea class="main-input" name="text message" placeholder="Your Message" required></textarea>
             <input class="submit" type="submit" value="Send Message" />
           </form>
 
